@@ -2,24 +2,25 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import Head from 'next/head'
 import React from 'react'
 import slug from 'slug'
+
 const sectionsColor = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c']
 
 const pages = [
   {
-    title: 'Discrimination is Ubiquitous',
+    title: 'Discrimination is Everywhere',
     body: (
       <>
-        <div className='flex justify-evenly w-full'>
+        <div className='flex justify-evenly w-full h-48'>
           <figure>
             <img
-              src='https://www.nydailynews.com/resizer/2ld4i253VAFW9mbHB919LeCSj9g=/1200x0/right/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/OVFYYCGOYZHIHBRNDMZVMXK7CQ.jpg'
-              height='200'
+              className='h-full'
+              src='https://i.loli.net/2021/05/08/acBn52lmGLJWHqD.png'
             />
           </figure>
           <figure>
             <img
+              className='h-full'
               src='https://static01.nyt.com/images/2021/03/21/lens/18georgia-shooting-promo/18georgia-shooting-promo-videoSixteenByNine3000.jpg'
-              height='200'
             />
           </figure>
         </div>
@@ -27,10 +28,18 @@ const pages = [
     )
   },
   {
-    title: 'Are You Discriminatory?',
+    title: 'But... Everyone Discriminates',
     body: (
       <>
-        <i>Harvard Implicit Association Test (IAT)</i>
+        <h2>Harvard Implicit Association Test (IAT): Gender-Career</h2>
+        <img src='https://i.loli.net/2021/05/09/mA5XICxQWHegUEw.png' />
+      </>
+    )
+  },
+  {
+    title: 'Am I...Discriminatory ?',
+    body: (
+      <>
         <iframe
           src='https://implicit.harvard.edu/implicit/takeatest.html'
           style={{ height: '70vh', flexGrow: '1', marginTop: '2rem' }}
@@ -101,7 +110,7 @@ const pages = [
           loafing. Social loafing makes the whole discriminating thing even
           worse.
         </p>
-        <figure>
+        <figure className='flex items-center flex-col my-8 space-y-4'>
           <img src='https://i.loli.net/2021/05/08/qMGrwm6CxDJkiZy.png' />
           <figcaption>
             This figure shows that behaviors from Intergroup affect and
@@ -166,6 +175,32 @@ const pages = [
         </p>
       </>
     )
+  },
+  {
+    title: 'References',
+    body: (
+      <>
+        <ol className='list-decimal text-left space-y-6'>
+          <li>
+            (Bond & Russell, 2010) Bond, L., & Russell, H. (Eds.).
+            (2010). Making equality count: Irish and international approaches to
+            measuring equality and discrimination. Dublin, Ireland: Liffey
+            Press.
+          </li>
+          <li>
+            Cuddy, A.J.C., Fiske, S.T, and Glick, P. (2007). 'The BIAS map:
+            Behaviors from intergroup affect and stereotypes'. Journal of
+            Personality and Social Psychology, 92, 631‐648
+          </li>
+          <li>
+            Dovidio, J.F., Brigham, J.C., Johnson, B.T. and Gaertner, S.L.
+            (1996). 'Stereotyping, prejudice, and discrimination: Another look'.
+            In N. Macrae, C. Stangor and M. Hewstone (eds.), Stereotypes and
+            Stereotyping (pp. 276‐ 319). New York: Guilford
+          </li>
+        </ol>
+      </>
+    )
   }
 ]
 
@@ -178,7 +213,7 @@ export default function page(props) {
   return (
     <div className='App'>
       <Head>
-        <title>My styled page</title>
+        <title>PSY 100 Project on Discrimination</title>
         {/* <link href="/static/styles.css" rel="stylesheet" /> */}
       </Head>
       <ReactFullpage
