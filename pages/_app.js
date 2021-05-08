@@ -1,4 +1,4 @@
-import '/home/jkker/Code/kris-psy100-final-project/styles/styles.scss'
+import '/styles/styles.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
