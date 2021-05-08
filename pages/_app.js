@@ -1,7 +1,5 @@
-import '../styles/globals.css'
+import '/home/jkker/Code/kris-psy100-final-project/styles/styles.scss'
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
-
-export default MyApp
