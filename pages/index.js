@@ -10,7 +10,7 @@ const pages = [
     title: 'Discrimination is Everywhere',
     body: (
       <>
-        <div className='flex justify-evenly w-full h-48'>
+        <div className='flex justify-evenly w-full' style={{ height: '300px' }}>
           <img
             className='h-full'
             src='https://i.loli.net/2021/05/08/acBn52lmGLJWHqD.png'

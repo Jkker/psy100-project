@@ -20,6 +20,7 @@
   }
   .section p {
     text-align: start;
+    @apply mb-4;
   }
   .section figcaption {
     font-size: 1rem;
