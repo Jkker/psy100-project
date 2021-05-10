@@ -2,8 +2,10 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import Head from 'next/head'
 import React from 'react'
 import slug from 'slug'
-
-const sectionsColor = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c']
+Array.prototype.sample = function () {
+  return this[~~(Math.random() * this.length)]
+}
+const baseColor = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c']
 
 const pages = [
   {
@@ -148,8 +150,8 @@ const pages = [
         people resolve this conflict by upholding egalitarian norms and
         simultaneously maintaining subtle or automatic forms of prejudice.
         Specifically, people generally will not discriminate in situations in
-        which right and wrong is clearly defined; discrimination would be ob‐
-        vious to others and to oneself, and aversive racists do not want to
+        which right and wrong is clearly defined; discrimination would be
+        obvious to others and to oneself, and aversive racists do not want to
         appear or be discriminatory. However, aversive racists will
         systematically discriminate when appropriate behaviours are not clearly
         prescribed or they can justify their behaviour on the basis of some
@@ -162,16 +164,25 @@ const pages = [
     body: (
       <>
         <p>
-          Knowing the formation of stereotypes and discrimination cannot help
-          prevent it easily. However, many individuals and societal factors
-          continue to reinforce stereotypes and negative evaluative biases,
-          which resulted in more discrimination and suppression. The ethnic
-          issue and racial problem have been more complicated than before.
+          The Implicit Association Test shed light on the pervasiveness of
+          stereotyping and discrimination in the general population.
+          Nonetheless, it also helps identify the possible causes of their
+          formation. Familiarity is key: people are often scared of the unknown,
+          so they form prejudices.
         </p>
         <p>
-          When someone is in a group, they are less likely to provide help than
-          they are alone. This phenomenon is defined as social loafing. Social
-          loafing makes the whole discriminating thing even worse.
+          Moreover, when someone is in a group, they are less likely to provide
+          help than they are alone. This phenomenon is defined as social
+          loafing. Social loafing makes the whole discriminating thing even
+          worse.
+        </p>
+        <p>
+          After all, knowing the formation of stereotypes and discrimination
+          cannot eradicate them. Many individuals and societal factors continue
+          to reinforce stereotypes and negative evaluative biases, which
+          resulted in more discrimination and suppression. The ethnic issue and
+          racial problem in our world is becoming increasingly complicated than
+          ever.
         </p>
       </>
     )
@@ -201,8 +212,34 @@ const pages = [
         </ol>
       </>
     )
+  },
+  {
+    title: 'Acknowledgements',
+    body: (
+      <>
+        <ol className='list-decimal text-left space-y-6'>
+          <li>
+            Visuals built with{' '}
+            <a href='https://alvarotrigo.com/fullPage/'>fullpage.js</a>
+          </li>
+          <li>
+            Website deployed on <a href='https://vercel.com/'>Vercel</a>
+          </li>
+          <li>
+            Domain registered for free on{' '}
+            <a href='https://www.freenom.com/'>Freenom</a>
+          </li>
+        </ol>
+      </>
+    )
   }
 ]
+
+const sectionsColor = []
+
+for (let i = 0; i < pages.length; i++) {
+  sectionsColor.push(baseColor.sample())
+}
 
 export default function page(props) {
   const onLeave = (origin, destination, direction) => {
