@@ -145,7 +145,7 @@ const pages = [
     title: 'Aversive Racism & Systematic Discrimination',
     body: (
       <p>
-        people resolve this conflict by upholding egalitarian norms and
+        People resolve this conflict by upholding egalitarian norms and
         simultaneously maintaining subtle or automatic forms of prejudice.
         Specifically, people generally will not discriminate in situations in
         which right and wrong is clearly defined; discrimination would be
