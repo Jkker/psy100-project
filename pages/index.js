@@ -2,9 +2,7 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import Head from 'next/head'
 import React from 'react'
 import slug from 'slug'
-Array.prototype.sample = function () {
-  return this[~~(Math.random() * this.length)]
-}
+
 const baseColor = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c']
 
 const pages = [
@@ -13,18 +11,18 @@ const pages = [
     body: (
       <>
         <div className='flex justify-evenly w-full h-48'>
-          <figure>
-            <img
-              className='h-full'
-              src='https://i.loli.net/2021/05/08/acBn52lmGLJWHqD.png'
-            />
-          </figure>
-          <figure>
-            <img
-              className='h-full'
-              src='https://static01.nyt.com/images/2021/03/21/lens/18georgia-shooting-promo/18georgia-shooting-promo-videoSixteenByNine3000.jpg'
-            />
-          </figure>
+          <img
+            className='h-full'
+            src='https://i.loli.net/2021/05/08/acBn52lmGLJWHqD.png'
+          />
+          <img
+            className='h-full'
+            src='https://static01.nyt.com/images/2021/03/21/lens/18georgia-shooting-promo/18georgia-shooting-promo-videoSixteenByNine3000.jpg'
+          />
+          <img
+            className='h-full'
+            src='https://i.loli.net/2021/05/11/SJRILKj5kE8Azty.jpg'
+          />
         </div>
       </>
     )
@@ -235,10 +233,10 @@ const pages = [
   }
 ]
 
-const sectionsColor = []
+const sectionsColor = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c']
 
-for (let i = 0; i < pages.length; i++) {
-  sectionsColor.push(baseColor.sample())
+for (let i = 4; i < pages.length; i++) {
+  sectionsColor.push(baseColor[~~(Math.random() * baseColor.length)])
 }
 
 export default function page(props) {
